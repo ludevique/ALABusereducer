@@ -5,7 +5,7 @@ function Header() {
     <div className="header">
       <ul>
         <li>
-          <Link to="/file">File</Link>
+          <Link to="/file">ToDoList</Link>
         </li>
         <li>
           <Link to="/addtask">Add-task</Link>

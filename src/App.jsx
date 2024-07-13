@@ -38,7 +38,7 @@ function App() {
           element={
             <>
               <Header />
-              <AddTask />
+              <AddTask dispatch={dispatch} />
             </>
           }
         />

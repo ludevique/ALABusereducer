@@ -4,11 +4,11 @@ import Task from "./Task";
 function File({ tasks, dispatch }) {
   return (
     <div>
-      <ul>
+      <ol className="task-list">
         {tasks.map((task) => (
-          <Task key={task.id} task={tasks} dispatch={dispatch} />
+          <Task key={task.id} task={task.title} dispatch={dispatch} />
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }

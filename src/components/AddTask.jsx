@@ -1,9 +1,10 @@
-import React, { useReducer, useState } from "react";
+import React, { useState } from "react";
 
 function AddTask({ dispatch }) {
   const [title, setTitle] = useState("");
 
-  function handleSubmit() {
+  function handleSubmit(e) {
+    e.preventDefault();
     dispatch({ type: "add_task", title });
     setTitle("");
   }
@@ -18,7 +19,6 @@ function AddTask({ dispatch }) {
           <input
             type="text"
             placeholder="enter your task "
-            name="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />

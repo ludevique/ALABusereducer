@@ -10,7 +10,7 @@ function Task({ task, dispatch }) {
     setIsEditing(true);
   }
   function handleDelete() {
-    dispatch({ type: "delete_task", id: task.id });
+    dispatch({ type: "remove_task", id: task.id });
   }
   function handleSave() {
     dispatch({ type: "edit_task", id: task.id, newTask });
@@ -20,7 +20,7 @@ function Task({ task, dispatch }) {
     setIsCompleted(!isCompleted);
   }
   return (
-    <li>
+    <li className="task-item">
       <input
         type="checkbox"
         checked={isCompleted}
@@ -30,7 +30,6 @@ function Task({ task, dispatch }) {
         <>
           <input
             type="text"
-            name="title"
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
           />
@@ -38,11 +37,11 @@ function Task({ task, dispatch }) {
         </>
       ) : (
         <>
-          <span>{task.title}</span>
+          <span>{task}</span>
           <button type="submit" onClick={handleEdit}>
             edit
           </button>
-          <button type="submit" disabled={isCompleted} onClick={handleDelete}>
+          <button type="submit" disabled={!isCompleted} onClick={handleDelete}>
             delete
           </button>
         </>
