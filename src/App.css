@@ -92,22 +92,24 @@
 .task-list {
   list-style: lower-roman;
   padding-left: 20px;
+  width: 400px;
 }
 
 .task-item {
   display: flex;
-  align-items: left;
+  align-items: center;
   margin-bottom: 10px;
 }
 
 .task-item input[type="text"] {
-  margin-right: 10px;
+  /* margin-right: 5px; */
   padding: 5px;
 }
 
 .task-item span {
   flex-grow: 1;
   margin-right: 10px;
+  text-align: left;
 }
 
 .task-item button {
@@ -117,5 +119,21 @@
 }
 
 .task-item input[type="checkbox"] {
-  margin-right: 10px;
+  margin-right: 2px;
+}
+/* Footer Container */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer h6 {
+  font-size: 14px;
+  margin: 0;
+  color: #bbb;
 }

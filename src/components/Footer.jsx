@@ -2,8 +2,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
-      <h6>&copy reseved!!</h6>
+    <div className="footer">
+      <h6>&copy; Reserved!!</h6>
     </div>
   );
 }

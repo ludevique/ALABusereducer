@@ -6,7 +6,7 @@ function File({ tasks, dispatch }) {
     <div>
       <ol className="task-list">
         {tasks.map((task) => (
-          <Task key={task.id} task={task.title} dispatch={dispatch} />
+          <Task key={task.id} task={task} dispatch={dispatch} />
         ))}
       </ol>
     </div>

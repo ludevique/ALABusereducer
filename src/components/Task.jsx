@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Task({ task, dispatch }) {
   const [isEditing, setIsEditing] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
-  const [newTask, setNewTask] = useState(task.title);
+  const [newTask, setNewTask] = useState(task.title || "");
 
   // handlers
   function handleEdit() {
@@ -12,9 +12,11 @@ function Task({ task, dispatch }) {
   function handleDelete() {
     dispatch({ type: "remove_task", id: task.id });
   }
-  function handleSave() {
-    dispatch({ type: "edit_task", id: task.id, newTask });
+  function handleSave(e) {
+    e.preventDefault();
+    dispatch({ type: "edit_task", id: newTask.id, newTask: newTask });
     setIsEditing(false);
+    // console.log(newTask);
   }
   function handleIsCompleted() {
     setIsCompleted(!isCompleted);
@@ -27,17 +29,17 @@ function Task({ task, dispatch }) {
         onChange={handleIsCompleted}
       />
       {isEditing ? (
-        <>
+        <form onSubmit={handleSave}>
           <input
             type="text"
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
           />
-          <button onClick={handleSave}>save edit</button>
-        </>
+          <button type="submit">save edit</button>
+        </form>
       ) : (
         <>
-          <span>{task}</span>
+          <span>{task.title}</span>
           <button type="submit" onClick={handleEdit}>
             edit
           </button>

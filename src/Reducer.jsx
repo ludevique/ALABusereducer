@@ -5,7 +5,7 @@ export default function reducer(state, action) {
     }
     case "edit_task": {
       return state.map((task) =>
-        task.id === action.id ? { ...state, title: action.newTask } : task
+        task.id === action.id ? { title: action.newTask } : task
       );
     }
     case "remove_task": {
