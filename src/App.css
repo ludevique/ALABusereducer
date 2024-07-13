@@ -137,3 +137,56 @@
   margin: 0;
   color: #bbb;
 }
+/* Container for the add task section */
+.addtask {
+  background-color: #4f4c4c;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+/* Header section for add task */
+.addtask-add h4 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Content section for add task */
+.addtask-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input field for task title */
+.addtask-content input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Save button */
+.addtask-content button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.addtask-content button:hover {
+  background-color: #0056b3;
+}
+.input {
+  background-color: #4f4c4c;
+}

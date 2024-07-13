@@ -14,7 +14,7 @@ function Task({ task, dispatch }) {
   }
   function handleSave(e) {
     e.preventDefault();
-    dispatch({ type: "edit_task", id: newTask.id, newTask: newTask });
+    dispatch({ type: "edit_task", id: task.id, newTask });
     setIsEditing(false);
     // console.log(newTask);
   }
