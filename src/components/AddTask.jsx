@@ -12,7 +12,7 @@ function AddTask({ dispatch }) {
   return (
     <div className="addtask">
       <div className="addtask-add">
-        <h4>Add your task,do it on time!! </h4>
+        <p>pass anything you want here</p>
       </div>
       <div className="addtask-content">
         <form onSubmit={handleSubmit} action="">
@@ -22,7 +22,7 @@ function AddTask({ dispatch }) {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-          <button type="submit">save</button>
+          <button type="submit">ButtonSave</button>
         </form>
       </div>
     </div>

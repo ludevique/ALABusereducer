@@ -1,11 +1,11 @@
 import { useReducer, useState } from "react";
 import "./App.css";
-import Header from "./components/Header";
+import Header from "./Components/Header";
 import { Route, Routes } from "react-router-dom";
-import AddTask from "./components/AddTask";
-import File from "./components/File";
-import About from "./components/About";
-import Footer from "./components/Footer";
+import AddTask from "./Components/AddTask";
+import File from "./Components/File";
+import About from "./Components/About";
+// import Footer from "./Components/Footer";
 import reducer from "./Reducer";
 let initailValue = [
   {
@@ -173,9 +173,10 @@ function App() {
           }
         />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
 
 export default App;
+

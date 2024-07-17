@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Task({ task, dispatch }) {
   const [isEditing, setIsEditing] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [newTask, setNewTask] = useState(task.title || "");
 
-  // handlers
+  //----------------------functions handlers--------------------------------
   function handleEdit() {
     setIsEditing(true);
   }
@@ -16,7 +16,7 @@ function Task({ task, dispatch }) {
     e.preventDefault();
     dispatch({ type: "edit_task", id: task.id, newTask });
     setIsEditing(false);
-    // console.log(newTask);
+    
   }
   function handleIsCompleted() {
     setIsCompleted(!isCompleted);
@@ -41,10 +41,10 @@ function Task({ task, dispatch }) {
         <>
           <span>{task.title}</span>
           <button type="submit" onClick={handleEdit}>
-            edit
+            EditButton
           </button>
           <button type="submit" disabled={!isCompleted} onClick={handleDelete}>
-            delete
+            DeleteButton
           </button>
         </>
       )}
